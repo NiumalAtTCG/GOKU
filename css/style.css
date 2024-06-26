@@ -1,0 +1,466 @@
+html{
+    scroll-behavior: smooth;
+    /* overflow: hidden; */
+
+}
+
+.login-container{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  
+}
+.login-container-d-box {
+   display:grid;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+h1{
+    font-family: Montserrat, sans-serif;
+    font-size: 23px;
+    font-weight: 100;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+h4{
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: lighter;
+}
+.login-card{
+
+flex: 1;
+   width: 500px;
+    padding: 20px;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    text-align: center;
+
+}
+input[type="text"],input[type="email"], input[type="password"] {
+    width: 80%;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin-top: 10px;
+    font-size: 15px;
+    font-weight:500;
+    
+  }
+  body {
+    overflow-x: hidden;
+}
+
+
+  
+
+  
+  .login_btn{
+    display: block;
+    width: 86%;
+    padding: 15px;
+  font-family: Montserrat, sans-serif;
+  background-color: #333;
+    text-decoration: none;
+    color: #fff;
+    border: 2px solid #fff;
+    letter-spacing: 3px;
+    cursor: pointer;
+    text-align: center;
+    position: relative;
+    transition: all .35s;
+    top: 10px;
+        margin-left: 7%;
+  }
+  
+.login_btn span{
+    position: relative;
+    z-index: 2;
+  }
+  
+.login_btn:after{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #ffffff;
+    transform-origin: left center;
+    transition: all .35s;
+  }
+  
+  
+ .login_btn:hover{
+    color: #333;
+  }
+  
+  .login_btn:hover:after{
+    width: 100%;
+  }
+  
+button {
+    color: #5f5a5a;
+    text-decoration: none;
+    margin-top: 10px;
+    border: none;
+  }
+  
+button:hover {
+    color: #2f2c2c;
+    text-decoration: none
+    ;
+  }
+  
+  .d-none{
+    display: none;
+  }
+  #msgdiv {
+    position: block; /* Position the message box absolutely */
+   /* Center vertically */
+    /* Center horizontally */
+    /* Adjust positioning for centering */
+    width: 80%; /* Set message box width */
+    margin-left: 7%;
+    padding: 15px; /* Add padding for content */
+    border: 1px solid #ccc; /* Add a border */
+    border-radius: 5px; /* Add rounded corners */
+    background-color: #f5f5f5; /* Set background color */
+    text-align: center; /* Center text within the message box */
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3); /* Add a subtle shadow */
+    z-index: 10; /* Ensure the message box is displayed on top of other elements */
+  }
+  #msgdiv1 {
+    position: block; /* Position the message box absolutely */
+   /* Center vertically */
+    /* Center horizontally */
+    /* Adjust positioning for centering */
+    width: 80%; /* Set message box width */
+    margin-left: 7%;
+    padding: 15px; /* Add padding for content */
+    border: 1px solid #ccc; /* Add a border */
+    border-radius: 5px; /* Add rounded corners */
+    background-color: #f5f5f5; /* Set background color */
+    text-align: center; /* Center text within the message box */
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3); /* Add a subtle shadow */
+    z-index: 10; /* Ensure the message box is displayed on top of other elements */
+  }
+  .msg {
+    font-weight: bold; /* Make message text bold */
+    color: red; /* Set message text color to red (for error messages) */
+  }
+  .msg1 {
+    font-weight: bold; /* Make message text bold */
+    color: red; /* Set message text color to red (for error messages) */
+  }
+ .d-flex{
+
+width:"50%";
+ }
+ .f-left{
+float: left;
+ }
+ .f-right{
+float: right;
+ }
+ .remember-me {
+  display: flex; /* Arrange checkbox and label horizontally */
+  align-items: center; /* Align vertically */
+  margin-left: 6%;
+  margin-top:10px /* Add some spacing below */
+  
+}
+
+.remember-me input[type="checkbox"] {
+  margin-right: 5px; /* Add spacing between checkbox and label */
+}
+.forget_pass{
+float: right;
+margin-right: 6%;
+margin-bottom: 2%;
+
+}
+.block-btn {
+    
+  display: block;
+  width: 80%;
+  padding: 5px;
+  font-family:  normalidad-compact, sans-serif;
+background-color: #F8343D;
+  text-decoration: none;
+  color: #fff;
+  border: 2px solid #fff;
+  letter-spacing: 2px;
+  cursor: pointer;
+  text-align: center;
+  position: relative;
+
+
+
+}
+.block-btn:hover{
+  
+  display: block;
+  width: 80%;
+  padding: 5px;
+  font-family:  normalidad-compact, sans-serif;
+background-color: #fff;
+  text-decoration: none;
+  color: #000000;
+  border: 2px solid #000000;
+  letter-spacing: 2px;
+  cursor: pointer;
+  text-align: center;
+  position: relative;
+ 
+
+
+
+}
+@media (max-width: 600px) {
+  .block-btn {
+      width: 100%;
+  }
+  .block-btn:hover {
+    width: 100%;
+}
+}
+/* *********************************************************** */
+.Active-btn {
+  
+display: block;
+width: 80%;
+padding: 5px;
+font-family:  normalidad-compact, sans-serif;
+background-color: #34f87f;
+text-decoration: none;
+color: #fff;
+border: 2px solid #fff;
+letter-spacing: 2px;
+cursor: pointer;
+text-align: center;
+position: relative;
+
+
+
+}
+.Active-btn:hover{
+
+display: block;
+width: 80%;
+padding: 5px;
+font-family:  normalidad-compact, sans-serif;
+background-color: #fff;
+text-decoration: none;
+color: #000000;
+border: 2px solid #000000;
+letter-spacing: 2px;
+cursor: pointer;
+text-align: center;
+position: relative;
+
+
+
+
+}
+@media (max-width: 600px) {
+.Active-btn {
+    width: 100%;
+}
+.Active-btn:hover {
+  width: 100%;
+}
+}
+/* *********************************************************** */
+.addprooduct-btn {
+  
+  display: block;
+  width: 80%;
+  padding: 5px;
+  font-family:  normalidad-compact, sans-serif;
+  background-color:#fff;
+  text-decoration: none;
+  color: #000000;
+  border: 2px solid #000000;
+  letter-spacing: 2px;
+  cursor: pointer;
+  text-align: center;
+  position: relative;
+  
+  
+  
+  }
+  .addprooduct-btn:hover{
+  
+  display: block;
+  width: 80%;
+  padding: 5px;
+  font-family:  normalidad-compact, sans-serif;
+  background-color:  #212121;
+  text-decoration: none;
+  color: #ffffff;
+  border: 2px solid #000000;
+  letter-spacing: 2px;
+  cursor: pointer;
+  text-align: center;
+  position: relative;
+  
+  
+  
+  
+  }
+  @media (max-width: 600px) {
+  .addprooduct-btn {
+      width: 100%;
+  }
+  .addprooduct-btn:hover {
+    width: 100%;
+  }
+  }
+  /* ********************************************************************** */
+  .common-btn {
+  
+    display: block;
+    width: 100%;
+    padding: 5px;
+    font-family:  normalidad-compact, sans-serif;
+    background-color:#000000;
+    text-decoration: none;
+    color: #ffffff;
+    border: 2px solid #000000;
+    letter-spacing: 2px;
+    cursor: pointer;
+    text-align: center;
+    position: relative;
+    
+    
+    
+    }
+    .common-btn:hover{
+    
+    display: block;
+    width: 100%;
+    padding: 5px;
+    font-family:  normalidad-compact, sans-serif;
+    background-color:  #ffffff;
+    text-decoration: none;
+    color: #000000;
+    border: 2px solid #000000;
+    letter-spacing: 2px;
+    cursor: pointer;
+    text-align: center;
+    position: relative;
+    
+    
+    
+    
+    }
+    @media (max-width: 600px) {
+    .common-btn {
+        width: 100%;
+    }
+    .common-btn:hover {
+      width: 100%;
+    }
+    }
+
+.search-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    width: 70%;
+    font-family: normalidad-compact, sans-serif;
+    text-decoration: none;
+    background: linear-gradient(to right, #FEDC64, #F0A586, #E48697);
+    color: #000000;
+    border-radius: 20px;
+    border: 3px solid #fff;
+    letter-spacing: 2px;
+    cursor: pointer;
+    text-align: center;
+    position: relative;
+    transition: background-color 0.3s ease; /* Add this line for smooth color transition */
+}
+
+.search-btn:hover {
+  background: linear-gradient(to right, #FEDC64, #F0A586, #E48697);
+    color: #0e0e0e;
+    border: 3px solid #fff;
+}
+
+    @media (max-width: 600px) {
+        .search-btn {
+            width: 100%;
+        }
+        .search-btn:hover {
+            width: 100%;
+        }
+    }
+      
+      .back-button {
+        font-family: 'Roboto', sans-serif;
+      }
+      .tblCellback{
+   
+          background: linear-gradient(to right, #FEDC64, #F0A586, #E48697);
+      }
+      
+      #settingsDropdown + .dropdown-menu {
+        width: fit-content; /* This will fit the width of the content */
+        min-width: 0; /* Override Bootstrap's default min-width */
+    }
+    #map {
+      height: 100%;
+      width: 100%;
+    }
+    .feed-btn {
+  
+      display: block;
+      width: 80%;
+      padding: 10px;
+      font-family:  normalidad-compact, sans-serif;
+      background-color: #6458ed;
+      text-decoration: none;
+      color: #fff;
+      border: 2px solid #fff;
+      letter-spacing: 2px;
+      cursor: pointer;
+      text-align: center;
+      position: relative;
+      
+      
+      
+      }
+      .feed-btn:hover{
+      
+      display: block;
+      width: 80%;
+      padding: 10px;
+      font-family:  normalidad-compact, sans-serif;
+      background-color: #fff;
+      text-decoration: none;
+      color: #000000;
+      border: 2px solid #000000;
+      letter-spacing: 2px;
+      cursor: pointer;
+      text-align: center;
+      position: relative;
+      
+      
+      
+      
+      }
+      @media (max-width: 600px) {
+      .feed-btn {
+          width: 100%;
+      }
+      .feed-btn:hover {
+        width: 100%;
+      }
+      }
+      .reduced-letter-height {
+        font-size: 0.75em; 
+        letter-spacing: 5px; 
+    }

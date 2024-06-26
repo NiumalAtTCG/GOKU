@@ -1,0 +1,339 @@
+:root{
+    /* colors  */
+    --yellow :#ffffff;
+    --heading-font-weight: 500;
+    --heading-color: #000000;
+    --heading-font-style: normal;
+    /* --mid_green : #47996D;
+    --dark_green :#316F73; */
+  
+    /* fonts  */
+    --lg-font: 'Kaisei Tokumin', serif;
+    --sm-font: 'Poppins', sans-serif;
+
+.bg-yellow{
+  background-color: var(--yellow);
+}
+
+  }
+
+  
+  .logo  {
+  
+width: 80px;
+height: 40px;
+display: block;
+margin: auto;
+
+
+
+  }
+
+
+  .header-list {
+    float: left;
+    list-style: none;
+
+    color: #000;
+    font-size: 13px;
+    font-family: NormalidadWide-Medium;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: .87px;
+
+  }
+  
+  /* .header-list li {
+  
+    margin-left: 10px;
+  }
+  
+  .header-list a {
+  
+    color:var(--mid_green);
+    font-weight: 700;
+    font-family: var(--sm-font);
+  }
+   */
+
+  
+  .icons {
+ display: flex;
+ justify-content: space-around;
+ float: right;
+ list-style: none;
+
+
+
+
+
+  }
+  
+
+  
+  .icons  a {
+    color: #000000;
+    margin-right: 1rem;
+    
+
+
+
+   
+  }
+  @media (max-width: 600px) {
+    #qty_num {
+      width: 100%;
+    }
+  }
+  
+  /* Font Awesome Icon library (replace with your preferred icons) */
+  .fas {
+    font-family: FontAwesome;
+  }
+  /* Media queries for responsive behavior */
+  /* Media query for screens smaller than large (adjust breakpoint if needed) */
+
+/* .......................................................................................................................... */
+
+
+.background_img{
+  background-image: url("https://cdn.discordapp.com/attachments/1212747777004797975/1255147329049202698/GOKUZBANNER.png?ex=667c128a&is=667ac10a&hm=bbfef641532dc42a6900485f49743c42ca4fd4813b7522375fda5218c553390b&");
+  background-repeat: no-repeat; /* Image won't repeat */
+  background-position: center; /* Center the image */
+  background-size: cover; /* Resize image to cover the element */
+  height: 100vh;
+
+
+}
+.background_img2{
+  background-image: url("https://cdn.discordapp.com/attachments/1212747777004797975/1238107070012719176/Frame_11_1.png?ex=667b6250&is=667a10d0&hm=e8abdb9f37d9ba31c88b37315af5a751626f161b0e7e53a8cab02461b5d2edd6&");
+  background-repeat: no-repeat; /* Image won't repeat */
+  background-position: center; /* Center the image */
+  background-size: cover; /* Resize image to cover the element */
+  height: 90vh;
+
+
+}
+.background_img3{
+  background-image: url("https://cdn.discordapp.com/attachments/1212747777004797975/1238175047324139622/Frame_17-AOjyU7Gy8-transformed.png?ex=667ba19f&is=667a501f&hm=c7541a276b99865fdf524dccc6faa0e0d271dd36d18436d592e02ae23539f536&");
+  background-repeat: no-repeat; /* Image won't repeat */
+  background-position: center; /* Center the image */
+  background-size: cover; /* Resize image to cover the element */
+  height: 90vh;
+
+
+}
+.SectionHeader__Heading_cart{
+  color: #000;
+  font-size: min(max(1rem,9vw),10rem);
+  margin-top: 0;
+  font-family: NormalidadExtended, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Ubuntu, Helvetica Neue, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+  text-transform: uppercase;
+  line-height: 0.85;
+  letter-spacing:  0.2em;
+}
+.SectionHeader__Heading{
+  color: #000;
+  font-size: min(max(1rem,9vw),10rem);
+  margin-top: 0;
+  font-family: NormalidadExtended, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Ubuntu, Helvetica Neue, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+  text-transform: uppercase;
+  line-height: 0.85;
+  letter-spacing:  0.4em;
+}
+.SectionHeader__Heading_admin{
+  color: #000;
+  font-size: min(max(1rem,7vw),6rem);
+  margin-top: 0;
+  font-family: NormalidadExtended, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Ubuntu, Helvetica Neue, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+  text-transform: uppercase;
+  line-height: 0.85;
+  letter-spacing:  0.2em;
+}
+.SectionHeader__Heading_admin_sub-heading{
+  color: #000;
+  font-size: min(max(1rem,1.3vw),1.5rem);
+  margin-top: 0;
+  font-family: NormalidadExtended, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Ubuntu, Helvetica Neue, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+  text-transform: uppercase;
+  line-height: 0.85;
+  letter-spacing:  0.2em;
+}
+.carts_title{
+  font-size: min(max(0.9rem,0.6vw),1rem);
+  font-weight:bold ;
+}
+.bg_title{
+
+  position: absolute;
+  color: #fff;
+    top: 85%;
+    left: 5%;
+  
+    width: 50%;
+    padding: 1%;
+   
+    padding: 30px;
+    min-width: 350px;
+}
+.stawbeerytxt {
+  text-transform: uppercase;
+  font-size: 2.55rem;
+  font-weight: bolder;
+  margin-bottom: 5%;
+}
+.goku_btn {
+  display: inline-block;
+  width: 25%;
+  max-width: 300px; /* Limit maximum width to 300px */
+  background-color: #e86c32cb;
+  color: #030303;
+  border: 1px solid hsl(0, 0%, 86%);
+  padding: 10px 20px; /* Adjust padding for better spacing */
+  text-align: center;
+  text-transform: uppercase;
+  position: relative; /* Ensure relative positioning for pseudo-element */
+  overflow: hidden; /* Hide overflow for pseudo-element */
+}
+
+.goku_btn:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #070707;
+  transform: scaleX(0); /* Initially hide the pseudo-element */
+  transform-origin: left center;
+  transition: transform 0.35s ease-out; 
+}
+
+.goku_btn:hover:after {
+  transform: scaleX(1); /* Expand the pseudo-element on hover */
+}
+
+.goku_btn:hover {
+  background-color: #e86b32;
+  color: white;
+}
+
+@media (max-width: 600px) {
+  .goku_btn {
+    width: 100%; /* Take full width on smaller screens */
+    max-width: none; /* Remove max-width constraint */
+  }
+}
+
+.goku_btnfont{
+  font-family: NormalidadExtended, BlinkMacSystemFont, Segoe UI, Roboto, Ubuntu, Helvetica Neue, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+  font-weight: 500;
+  font-style: normal;
+  letter-spacing: 1px;
+
+ 
+  position: relative;
+  z-index: 2;
+}
+.outOfStock-btn {
+    
+  display: block;
+  width: 80%;
+  padding: 10px;
+  font-family:  normalidad-compact, sans-serif;
+background-color: #fff;
+  text-decoration: none;
+  color: #000000;
+  border: 2px solid #000000;
+  letter-spacing: 2px;
+  cursor: pointer;
+  text-align: center;
+  position: relative;
+ 
+  top: 10px;}
+
+  @media (max-width: 600px) {
+    .outOfStock-btn {
+        width: 100%;
+    }
+ 
+    
+}
+ /* ********************************************************************** */
+ .common-btn {
+  
+  display: block;
+  width: 100%;
+  padding: 5px;
+  font-family:  normalidad-compact, sans-serif;
+  background-color:#000000;
+  text-decoration: none;
+  color: #ffffff;
+  border: 2px solid #000000;
+  letter-spacing: 2px;
+  cursor: pointer;
+  text-align: center;
+  position: relative;
+  
+  
+  
+  }
+  .common-btn:hover{
+  
+  display: block;
+  width: 100%;
+  padding: 5px;
+  font-family:  normalidad-compact, sans-serif;
+  background-color:  #ffffff;
+  text-decoration: none;
+  color: #000000;
+  border: 2px solid #000000;
+  letter-spacing: 2px;
+  cursor: pointer;
+  text-align: center;
+  position: relative;
+  
+  
+  
+  
+  }
+  @media (max-width: 600px) {
+  .common-btn {
+      width: 100%;
+  }
+  .common-btn:hover {
+    width: 100%;
+  }
+  }
+/* *******************************************CART CSS********************************* */
+.cart_title{
+align-items: center;
+  font-family: NormalidadExtended, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Ubuntu, Helvetica Neue, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 1.09px;
+  margin-left: 50%;
+  margin-top: 3%;
+
+}
+.cart-class-div{
+border-width: 5px, 0px ,5px, 4px;
+border-style: solid;
+ border-color: #00000060;
+
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table, th, td {
+  border: 1px solid black;
+  padding: 15px;
+  text-align: left;
+}
+
+th {
+  background-color: #000000;
+  color: white;
+}
