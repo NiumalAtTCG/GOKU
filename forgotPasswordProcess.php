@@ -32,7 +32,7 @@ if(isset($_GET["e"])){
         $mail->addReplyTo('hirushasilva64@gmail.com', 'Reset Password');
         $mail->addAddress($email);
         $mail->isHTML(true);
-        $mail->Subject = 'eShop Forgot password Verification Code';
+        $mail->Subject = 'goku Forgot password Verification Code';
         $bodyContent = '<h1 style="color:green;">Your Verification Code is '.$code.'</h1>';
         $mail->Body    = $bodyContent;
 

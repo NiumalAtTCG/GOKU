@@ -24,42 +24,30 @@ if (isset($_SESSION["au"])) {
     <?php include "adminheader.php" ?>
     <div class="col-12 mb-5 mt-3">
         <div class="row align-items-center">
-            <h1 class="SectionHeader__Heading_admin Heading u-h1 text-center fw-semibold ">ManEge Users</h1>
+            <h1 class="SectionHeader__Heading_admin Heading u-h1 text-center fw-semibold ">PRODUCT SHIPPING</h1>
         </div>
         
     </div>
     <div class="col-12">
         <div class="row">
         <div class="col-12 d-inline-block justify-content-center mb-2 mt-3 ">
-    <div class="row align-content-center justify-content-center">
-
-        <div class="col-4 col-lg-3 d-flex justify-content-center">
-            <!-- <button onclick="window.location.href='viewInvoice.php'" class="addprooduct-btn">VIEW INVOICE</button> -->
-        </div>
-
-        <div class="col-4 col-lg-6 d-flex justify-content-center"> 
-            <!-- <button onclick="window.location.href='AddProductData.php'" class="addprooduct-btn">MANAGE PRODUCT CATOGORY</button> -->
-        </div>
-
-        <div class="col-4 col-lg-3 d-flex justify-content-center"> 
-            <button class="addprooduct-btn" onclick="printInvoice();">Print Report</button>
-        </div>
-
-    </div>
+   
 </div>
             <div class="col-12"  id="page">
                 <table>
                     <tr>
                         <th class="col-1">ID</th>
-                        <th class="col-1  ">PROFILE IMAGE</th>
-                        <th class="col-2">USER NAME</th>
+                        <th class="col-1  ">ORDER ID</th>
+                        <th class="col-1">USER NAME</th>
                         <th class="col-2">EMAIL</th>
-                        <th class="col-2">MOBILE</th>
-                        <th class="col-2">REGISTERED DATE</th>
-                        <th class="col-2">STATUS</th>
+                        <th class="col-1">PID</th>
+                        <th class="col-1">QTY</th>
+                        <th class="col-2">PLACE ORDER DATE</th>
+                        <th class="col-2">SHIP ITEM</th>
+                       
                     </tr>
                     <?php
-                    $query = "SELECT * FROM `user`";
+                    $query = "SELECT * FROM `invoice`";
                     $pageno;
 
                     if (isset($_GET["page"])) {
@@ -71,7 +59,7 @@ if (isset($_SESSION["au"])) {
                     $user_rs = Database::search($query);
                     $user_num = $user_rs->num_rows;
 
-                    $results_per_page = 20;
+                    $results_per_page = 6;
                     $number_of_pages = ceil($user_num / $results_per_page);
 
                     $page_results = ($pageno - 1) * $results_per_page;
@@ -82,30 +70,26 @@ if (isset($_SESSION["au"])) {
                     for ($x = 0; $x < $selected_num; $x++) {
                         $selected_data = $selected_rs->fetch_assoc();
 
-                        $img_rs = Database::search("SELECT * FROM  `profile_img` WHERE `user_email`='" . $selected_data["email"] . "'");
+                        $img_rs = Database::search("SELECT * FROM  `user` WHERE `email`='" . $selected_data["user_email"] . "'");
                         $img_data = $img_rs->fetch_assoc();
                         $img_num = $img_rs->num_rows;
 
                         echo "<tr>";
                         echo "<td><span class='text-dark'>" . ($x + 1 + $page_results) . "</span></td>";
+                        echo "<td><span>" . $selected_data['order_id'] . "</span></td>";
+                        echo "<td><span class='text-dark'>" . $img_data["fname"] . " " . $img_data["lname"] . "</span></td>";
+                        echo "<td><span>" . $selected_data['user_email'] . "</span></td>";
+                        echo "<td><span>" . $selected_data['product_id'] . "</span></td>";
+                        echo "<td><span class='text-dark'>" . $selected_data['qty'] . "</span></td>";
+                        echo "<td><span>" . $selected_data['date'] . "</span></td>";
                         echo "<td>";
-                        if ($img_num == 1) {
-                            echo "<img src='" . $img_data["path"] . "' style='height: 40px; margin-left: 80px;' />";
+                        if ($selected_data['status'] == 0) {
+                            echo "<button id='btn" . $selected_data['user_email'] . "' class='Active-btn' onclick=\"shipitem('" . $selected_data['user_email'] . "', '" . $selected_data['order_id'] . "');\">SHIP</button>";
                         } else {
-                            echo "<img src='resources/profile_images/image.png' style='height: 40px; margin-left: 80px;' />";
+                            echo "<button class='disabled-btn' onclick=\"alertShipped();\">Already Shipped</button>";
                         }
                         echo "</td>";
-                        echo "<td><span class='text-dark'>" . $selected_data["fname"] . " " . $selected_data["lname"] . "</span></td>";
-                        echo "<td><span>" . $selected_data['email'] . "</span></td>";
-                        echo "<td><span class='text-dark'>" . $selected_data['mobile'] . "</span></td>";
-                        echo "<td><span>" . $selected_data['joined_date'] . "</span></td>";
-                        echo "<td>";
-                        if ($selected_data["status_status_id"] == 1) {
-                            echo "<button id='ub" . $selected_data['email'] . "' class='block-btn' onclick=\"blockUser('" . $selected_data['email'] . "');\">De-Active</button>";
-                        } else {
-                            echo "<button id='ub" . $selected_data['email'] . "' class='Active-btn' onclick=\"blockUser('" . $selected_data['email'] . "');\">Active</button>";
-                        }
-                        echo "</td>";
+                        
                         echo "</tr>";
                     }
                     ?>

@@ -530,10 +530,10 @@ function blockUser(email) {
       if (request.readyState == 4) {
         var txt = request.responseText;
         if (txt == "blocked") {
-          document.getElementById("ub" + email).innerHTML = "Unblock";
+          document.getElementById("ub" + email).innerHTML = "Active";
           document.getElementById("ub" + email).classList = "Active-btn";
         } else if (txt == "unblocked") {
-          document.getElementById("ub" + email).innerHTML = "Block";
+          document.getElementById("ub" + email).innerHTML = "De-Active";
           document.getElementById("ub" + email).classList = "block-btn";
         } else {
             Swal.fire({
@@ -1398,4 +1398,43 @@ function saveInvoice2(orderId, mail) {
     request.open("POST", "saveinvoice2.php", true);
     request.send(form);
 
+}
+function shipitem(id, oid) {
+    var request = new XMLHttpRequest();
+
+    request.onreadystatechange = function () {
+        if (request.status == 200 && request.readyState == 4) {
+            var text = request.responseText;
+
+            if (text == "Success") {
+                Swal.fire({
+                    title: "Shiped",
+                    icon: "success"
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        var btn = document.getElementById("btn" + id);
+                        btn.innerHTML = "DELETE";
+                        btn.classList.remove("Active-btn");
+                        btn.classList.add("delete-btn");
+                        window.location.reload();
+                    }
+                });
+            } else {
+                Swal.fire({
+                    title: text,
+                    icon: "error"
+                });
+            }
+        }
+    };
+
+    request.open("GET", "shipItemProcess.php?u=1&umail=" + id + "&oid=" + oid, true);
+    request.send();
+}
+
+function alertShipped() {
+    Swal.fire({
+        title: "You already shipped this item",
+        icon: "info"
+    });
 }

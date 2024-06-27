@@ -31,15 +31,19 @@ if (isset($_SESSION["au"])) {
     <div class="col-12 d-inline-block justify-content-center mb-2 mt-3 ">
     <div class="row align-content-center justify-content-center">
 
-        <div class="col-4 d-flex justify-content-center">
+        <div class="col-6 col-lg-3 d-flex justify-content-center">
             <button onclick="window.location.href='addproduct.php'" class="addprooduct-btn">ADD PRODUCT</button>
         </div>
 
-        <div class="col-4 d-flex justify-content-center"> 
-            <button onclick="window.location.href='AddProductData.php'" class="addprooduct-btn">MANAGE PRODUCT CATOGORY</button>
+
+        <div class="col-6 col-lg-3 d-flex justify-content-center"> 
+            <button onclick="window.location.href='AddProductData.php'" class="addprooduct-btn">MANAGE  CATOGORY</button>
+        </div>
+        <div class="col-6 col-lg-3 d-flex justify-content-center">
+            <button onclick="window.location.href='viewInvoice.php'" class="addprooduct-btn"> PRODUCT SHIPPING</button>
         </div>
 
-        <div class="col-4 d-flex justify-content-center"> 
+        <div class="col-6 col-lg-3 d-flex justify-content-center"> 
             <button class="addprooduct-btn" onclick="printInvoice();">Print Report</button>
         </div>
 
@@ -55,12 +59,12 @@ if (isset($_SESSION["au"])) {
                 <table>
                     <tr>
                         <th class="col-1">ID</th>
-                        <th class="col-2">PRODUCT IMAGE</th>
+                        <th class="col-1">PRODUCT IMAGE</th>
                         <th class="col-2">FLAVOR</th>
                         <th class="col-1">PRICE</th>
                         <th class="col-1">QTY</th>
                         <th class="col-2">REGISTERED DATE</th>
-                        <th class="col-1">STATUS</th>
+                        <th class="col-2">STATUS</th>
                         <th class="col-2">Update</th>
                     </tr>
                     <?php
